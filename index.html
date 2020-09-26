@@ -99,9 +99,9 @@
         از
         دانشجویان
         کارشناسی ارشد و دکتری ایشان در <a href="http://www.sharif.ir/home">دانشگاه صنعتی شریف</a> هستند. تجربه ی
-        سالها
+        سال‌ها
         تدریس دکتر گودرزی در ایران و کانادا و دستاوردهای دانشجویان ایشان
-        در <a href="https://easy.ce.sharif.edu">آزمایشگاه پژوهشی آسان</a> پشتوانه
+        در <a href="http://easy.ce.sharif.edu">آزمایشگاه پژوهشی آسان</a> پشتوانه
         و اثبات توانمندی‌های فنی و کیفیت تدریس در این گروه است.</p>
     </div>
   </div>
@@ -236,15 +236,27 @@
 
 <div class="w3-row w3-padding w3-margin-top">
 
-<div class="w3-container w3-half" id="contact">
-  <h1 class="w3-center">تماس با تاک</h1>
-  <p class="w3-center">ایمیل: <a href="mailto:nrasadi@ce.sharif.edu">nrasadi@ce.sharif.edu</a></p>
-</div>
-
-<div class="w3-container w3-light-gray w3-half" id="about">
+<div class="w3-container w3-light-gray w3-half" id="about" style="padding-bottom: 5em;">
   <h1 class="w3-center">درباره‌ی تاک</h1>
   <p>آینده ای بدون دانش کامپیوتر قابل تصور نیست. هدف ما رساندن آموزش باکیفیت کامپیوتر به تمام کشور و تمام فارسی زبانان در سراسر دنیاست. مجازی شدن آموزش در پی بحران ویروس کرونا فرصتی فراهم کرد
      تا این کار را سرعت ببخشیم و این فقط شروع آکادمی تاک بود. منتظر برنامه های تازه ما باشید.</p>
+</div>
+
+<div class="w3-container w3-half footer" id="contact" style="margin-bottom: -1em;margin-right: 0em;">
+  <h1 class="w3-center">تماس با تاک</h1>
+  <form class="w3-container w3-card" id="my-form" action="https://formspree.io/mjvpkbze" method="POST">
+    <div class="w3-section">
+      <label><b>ایمیل</b></label>
+      <input class="w3-input w3-margin-bottom w3-dark-gray" type="email" placeholder="someone@gmail.com" name="email" required style="direction:ltr;border-width:0px;border: none;">
+      <label><b>پیام</b></label>
+      <textarea class="w3-input w3-dark-gray" placeholder="متن پیام..." name="message" required></textarea>
+      <!-- <input class="w3-input w3-border" type="textarea" placeholder="متن پیام" name="message" required> -->
+      <button class="w3-button w3-block w3-green w3-section w3-padding" id="my-form-button" type="submit">ثبت</button>
+      <p id="my-form-status"></p>
+    </div>
+  </form>
+
+  <p class="w3-right">ارتباط ایمیلی: <a href="mailto:nrasadi@ce.sharif.edu">nrasadi@ce.sharif.edu</a></p>
 </div>
 
 </div>
@@ -304,6 +316,54 @@
         document.documentElement.scrollTop = 0;
       }
     </script>
+
+<script>
+  window.addEventListener("DOMContentLoaded", function() {
+
+    // get the form elements defined in your form HTML above
+    
+    var form = document.getElementById("my-form");
+    var button = document.getElementById("my-form-button");
+    var status = document.getElementById("my-form-status");
+
+    // Success and Error functions for after the form is submitted
+    
+    function success() {
+      form.reset();
+      button.style = "display: none ";
+      status.innerHTML = "پیام شما با موفقیت ارسال شد. خیلی ممنون.";
+    }
+
+    function error() {
+      status.innerHTML = "پیام شما دچار خطا شد. لطفاً دوباره تلاش کنید.";
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function(ev) {
+      ev.preventDefault();
+      var data = new FormData(form);
+      ajax(form.method, form.action, data, success, error);
+    });
+  });
+  
+  // helper function for sending an AJAX request
+
+  function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        success(xhr.response, xhr.responseType);
+      } else {
+        error(xhr.status, xhr.response, xhr.responseType);
+      }
+    };
+    xhr.send(data);
+  }
+</script>
 
 </body>
 </html>
