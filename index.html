@@ -376,11 +376,11 @@
     avatar.src = "images/"+tutor+".jpg"   
 
     var input = document.createElement("input");
-    input.setAttribute("type", "text");
+    input.setAttribute("type", "hidden");
     input.setAttribute("name", "tutor");
     input.setAttribute("value", name.nodeValue);
     //append to form element that you want .
-    reserveForm.appendChild(input);
+    document.getElementById("reserveMeetingForm").appendChild(input);
   }
 
 </script>
@@ -403,6 +403,7 @@
           status.style.backgroundColor = "lime"
       
           setTimeout(function(){ document.getElementById('reserveForm').style.display='none'; }, 2000);
+          location.reload(); 
         }
     
         function error() {
