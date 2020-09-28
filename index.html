@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css"> -->
 <link rel="stylesheet" href="style.css"> 
 <!-- <link rel="stylesheet" href="flexbox.css"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,32 +24,33 @@
 </head>
 <body>
 
-  <button onclick="topFunction()" id="myBtn" title="Go to top"
-    style="display: block;bottom: 20px;right: 20px;position: fixed;z-index: 99999;"><i
-      class="fa fa-arrow-up w3-xlarge"></i></button>
+  <button onclick="topFunction()" id="myBtn" title="ابتدای صفحه" class="w3-button w3-card w3-hide-small"
+    style="bottom: 3%;right: 1%;position: fixed;z-index: 99999;"><i
+      class="fa fa-arrow-up w3-xlarge w3-text-dark-gray"></i></button>
 
-<div id="wrapper">
+      <div id="wrapper">
 
-<div class="topnav w3-container " id="myTopnav" style="right:0em;padding-right:0px">
-  <a href="#" class="active">
-    <h3 style="margin:0px"><b>تاک آکادمی</b></h3>
-  </a>
-  <a href="#intro">تاک چیست؟</a>
-  <a href="#howto">چگونه کار می‌کند؟</a>
-  <a href="#why">چرا تاک؟</a>
-  <a href="#tutors">مربیان</a>
-  <a href="#price">تعرفه</a>
-  <a href="#about">درباره‌ی تاک</a>
-  <a href="#contact">تماس با تاک</a>
-  <a href="javascript:void(0);" class="icon" onclick="burgermenu()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-<div class="w3-container"></div>
-
+        <div class="topnav" id="myTopnav" style="right:0em;padding-right:0px">
+          <a href="#" class="active w3-bar-item w3-right">
+            <h3 style="margin:0px;"><b>تاک آکادمی</b></h3>
+          </a>
+          <a href="#intro" class="w3-hide-small w3-right">تاک چیست؟</a>
+          <a href="#howto" class="w3-hide-small w3-right">چگونه کار می‌کند؟</a>
+          <a href="#why" class="w3-hide-small w3-right">چرا تاک؟</a>
+          <a href="#tutors"class="w3-hide-small w3-right">مربیان</a>
+          <a href="#price" class="w3-hide-small w3-right">تعرفه</a>
+          <a href="#about" class="w3-hide-small w3-right">درباره‌ی تاک</a>
+          <a href="#contact" class=" w3-hide-small w3-right">تماس با تاک</a>
+          <a href="javascript:void(0);" class="w3-left w3-hide-large w3-hide-medium w3-left" onclick="burgermenu()"
+            style="z-index: 100000;">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        
 <div class="wrapper" style="margin-top: 5rem;">
-
+        
   <div class="wrapper topHeader">
+        
 
     <div class="w3-container w3-center w3-text-white" id="aftertopbar" style="background-color:#525252;">
       <h1><b>تاک آکادمی: تدریس آنلاین کامپیوتر</b>
@@ -59,55 +61,60 @@
 
 </div>
 
-<div id="wrapper">
+<!-- <div id="wrapper"> -->
+  
 
   <div class="pt-3" id="intro">
-    <div class="boxDesc middle-sm">
-      <h1 class="boxTitle purp">تاک چیست؟</h1>
-      <p class="txt">تاک، کلاس خصوصی آنلاین کامپیوتر است.<br />
+    <!-- <div class="boxDesc w3-right"> -->
+      <div class="w3-row-padding w3-margin-bottom w3-center boxDesc">
+      <h1 class="w3-col l3 boxTitle purp w3-right w3-mobile"  style="text-align: right;">تاک چیست؟</h1>
+      <p class="txt w3-col l9 w3-left" style="text-align: right;padding-right: 0;">تاک، کلاس خصوصی آنلاین کامپیوتر است.<br />
         تاک، تدریس آنلاین کامپیوتر،
         آکادمی آموزش برنامه نویسی و کاربردهای کامپیوتر است که دانشجویان و فارغ التحصیلان برجسته ی دانشگاه صنعتی
         شریف،
-        زیر نظر استاد این دانشگاه، به منزل شما می آورند. فرقی نمی کند در کدام بخش کشور یا حتی خارج از کشور هستید؛
+        زیر نظر استاد این دانشگاه، به منزل شما می‌آورند. فرقی نمی‌کند در کدام بخش کشور یا حتی خارج از کشور هستید؛
         با تاک، آموزش با کیفیت توسط مدرسین مسلط و با توانمندی‌های اثبات شده در دسترس شماست.</p>
     </div>
   </div>
-  <div class="pt-3" id="howto">
-    <div class="boxDesc middle-sm">
 
-      <div class="txt"><b>خیلی ساده:</b>
-        <ol>
-          
-          <p><span class="w3-badge w3-dark-gray"> ۱ </span><span>&nbsp; مربی مورد نظر خود را انتخاب کنید.</span></p>
-          <p><span class="w3-badge w3-dark-gray"> ۲ </span><span> جلسه‌ی اول معرفی و آشنایی با وی را هماهنگ کنید. این جلسه ۱۵ دقیقه بوده و رایگان است.</span></p>
-          <p><span class="w3-badge w3-dark-gray"> ۳ </span><span> در صورت تمایل به ادامه، جلسات را با مربی مدنظر خود هماهنگ کرده و هزینه را به‌طور مستقیم به ایشان پرداخت کنید.</span></p>
-          <li class="w3-badge"></li>
-          <li class="w3-badge">
-          </li>
-        </ol>
+  <div class="pt-3 w3-mobile" id="howto">
+    
+    <div class="w3-row w3-margin-bottom w3-center boxDesc w3-mobile">
+      <h1 class="w3-col l3 boxTitle green w3-mobile" style="text-align: right;">چگونه کار می‌کند؟</h1>    
+      <div class="txt w3-col l9 w3-right" style="text-align: right;">
+        
+        <ul class="w3-right">
+          <b>خیلی ساده:</b>
+          <p><span class="w3-badge w3-dark-gray"> ۱ </span>
+            <span>&nbsp; مربی مورد نظر خود را انتخاب کنید.</span></p>
+          <p><span class="w3-badge w3-dark-gray"> ۲ </span>
+            <span> جلسه‌ی اول معرفی و آشنایی با وی را هماهنگ کنید. این جلسه ۱۵ دقیقه بوده و رایگان است.</span></p>
+          <p><span class="w3-badge w3-dark-gray"> ۳ </span>
+            <span> در صورت تمایل به ادامه، جلسات را با مربی مدنظر خود هماهنگ کرده و هزینه را به‌طور مستقیم به ایشان پرداخت کنید.</span></p>
+        </ul>
       </div>
-      <h1 class="boxTitle green">چگونه کار می‌کند؟</h1>
     </div>
+
   </div>
-  <div class="pt-3" id="why">
-    <div class="boxDesc middle-sm">
-      <h1 class="boxTitle orange">چرا تاک؟</h1>
-      <p class="txt">مربیان تاک زیر نظر <a href="http://sharif.ir/~goudarzi/">دکتر گودرزی</a> انتخاب شده‌اند و همگی
-        از
-        دانشجویان
-        کارشناسی ارشد و دکتری ایشان در <a href="http://www.sharif.ir/home">دانشگاه صنعتی شریف</a> هستند. تجربه ی
-        سال‌ها
-        تدریس دکتر گودرزی در ایران و کانادا و دستاوردهای دانشجویان ایشان
+
+  <!-- </div> -->
+  <div class="pt-3 w3-mobile middle-sm" id="why">
+    <div class="w3-row-padding w3-margin-bottom w3-center boxDesc">
+      <h1 class="w3-col l3 boxTitle orange w3-right">چرا تاک؟</h1>
+      <p class="txt w3-col l9 w3-left" style="text-align: right;">مربیان تاک زیر نظر 
+        <a href="http://sharif.ir/~goudarzi/">دکتر گودرزی</a> انتخاب شده‌اند و همگی از دانشجویان
+        کارشناسی ارشد و دکتری ایشان در <a href="http://www.sharif.ir/home">دانشگاه صنعتی شریف</a>
+         هستند. تجربه‌ی سال‌ها تدریس دکتر گودرزی در ایران و کانادا و دستاوردهای دانشجویان ایشان
         در <a href="http://easy.ce.sharif.edu">آزمایشگاه پژوهشی آسان</a> پشتوانه
         و اثبات توانمندی‌های فنی و کیفیت تدریس در این گروه است.</p>
     </div>
   </div>
-</div>
+<!-- </div> -->
 
-<div class="w3-container w3-animate-bottom w3-margin-bottom" id="tutors">
-<h1 class="w3-center boxTitle">مربیان</h1>
+<div class="w3-container w3-margin-bottom w3-mobile " id="tutors" style="margin-top: 5rem;padding-top: 4em;">
+<h1 class="w3-center boxTitle w3-mobile w3-margin-bottom">مربیان</h1>
 
-<div class="row w3-row-padding w3-margin-top">
+<div class="row w3-row-padding w3-margin-top w3-mobile">
   
   <div class="w3-half">
     <div class="column s4 w3-card w3-hover-shadow w3-round w3-margin-right w3-margin-left">
@@ -163,7 +170,7 @@
 
 </div>
 
-<div class="row w3-row-padding w3-margin-top">
+<div class="row w3-row-padding w3-margin-top w3-mobile">
   
   <div class="w3-half">
     <div class="column s4 w3-card w3-hover-shadow w3-round w3-margin-right w3-margin-left">
@@ -252,7 +259,7 @@
       </form>
 
       <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-        <button onclick="document.getElementById('reserveForm').style.display='none';" type="button" class="w3-button w3-red">انصراف</button>
+        <button onclick="document.getElementById('reserveForm').style.display='none';" type="button" class="w3-button w3-red w3-left">انصراف</button>
       </div>
 
     </div>
@@ -262,31 +269,23 @@
 
 </div>
 
-<div class="w3-container w3-blue-gray w3-animate-bottom w3-card-2" id="price">
+<div class="w3-container w3-blue-gray w3-card-2" id="price">
   <h1 class="w3-center boxTitle">تعرفه</h1>
   <p>جلسات تاک آکادمی یک ساعته هستند. (مگر در مواردی که با مربی خود به‌شکل دیگری هماهنگ کنید.)</p>
-  <div class="w3-row " style="margin-bottom: 2em;direction: rtl;">
-    <div class="w3-third w3-padding w3-center">
-      <div class="fa fa-tags w3-jumbo w3-margin-bottom"></div>
-      <div class="w3-large">رزرو ۱۰ ساعت کلاس: ۱۵٪ تخفیف</div>
+  <div class="w3-container w3-row w3-center" style="margin-bottom: 2em;direction: rtl;">
+    <div class="w3-container w3-third w3-padding w3-right">
+      <div class="fa fa-money w3-jumbo w3-margin-bottom"></div>
+      <div class="w3-large">تک جلسه کلاس یک ساعته: ۳۰۰هزار تومان</div>
     </div>
-    <div class="w3-third w3-padding w3-center">
+    <div class="w3-container w3-third w3-padding w3-center">
       <div class="fa fa-tag w3-jumbo w3-margin-bottom"></div>
       <div class="w3-large">رزرو ۵ ساعت کلاس: ۱۰٪ تخفیف</div>
     </div>
-    <div class="w3-third w3-padding w3-center">
-      <dic class="fa fa-money w3-jumbo w3-margin-bottom"></dic>
-      <div class="w3-large">تک جلسه کلاس یک ساعته: ۳۰۰هزار تومان</div>
+    <div class="w3-container w3-third w3-padding w3-left">
+      <div class="fa fa-tags w3-jumbo w3-margin-bottom"></div>
+      <div class="w3-large">رزرو ۱۰ ساعت کلاس: ۱۵٪ تخفیف</div>
     </div>
-    <!-- <div class="w3-third w3-padding w3-center">تک جلسه کلاس یک ساعته: ۳۰۰هزار تومان</div>
-    <div class="w3-third w3-padding w3-center">رزرو ۵ ساعت کلاس: ۱۰٪ تخفیف</div> -->
-    
   </div>
-  <!-- <ul>
-    <li>تک جلسه کلاس یک ساعته: ۳۰۰هزار تومان</li>
-    <li>رزرو ۵ ساعت کلاس: ۱۰٪ تخفیف</li>
-    <li>رزرو ۱۰ ساعت کلاس: ۱۵٪ تخفیف</li>
-  </ul> -->
 </div>
 
 <div class="w3-row w3-padding-top w3-margin-top">
@@ -299,19 +298,19 @@
      تا این کار را سرعت ببخشیم و این فقط شروع آکادمی تاک بود. منتظر برنامه های تازه ما باشید.</p>
 </div>
 
-<div class="w3-container w3-half" id="contact" style="margin-bottom: -1em;margin-right: 0em;background-color: #333;color:white;border-top-left-radius: 15%;border-top-right-radius: 15%;">
+<div class="w3-container w3-half" id="contact" style="margin-bottom: -1em;margin-right: 0em;background-color: #333;color:white;border-top-left-radius: 3em;border-top-right-radius: 3em;">
   <h1 class="w3-center">تماس با تاک</h1>
-  <form class="w3-container w3-card" id="my-form" action="https://formspree.io/mjvpkbze" method="POST">
+  <form class="w3-container w3-card" id="my-form" action="https://formspree.io/mjvpkbze" method="POST" style="border-radius: 1em;">
     <div class="w3-section">
       <label><b>ایمیل</b></label>
       <input class="w3-input w3-margin-bottom " type="email" 
       placeholder="someone@gmail.com" name="email" required 
-      style="direction:ltr;border-width:0px;border: none;background-color: #444;color:white">
+      style="direction:ltr;border-width:0px;border: none;background-color: #444;color:white;border-radius: 1em;">
       <label><b>پیام</b></label>
       <textarea class="w3-input" placeholder="متن پیام..." 
-      name="message" required style="background-color:#444;color:white"></textarea>
+      name="message" required style="background-color:#444;color:white;border-radius: 1em;"></textarea>
       <!-- <input class="w3-input w3-border" type="textarea" placeholder="متن پیام" name="message" required> -->
-      <button class="w3-button w3-block w3-section w3-padding button" id="my-form-button" type="submit">ثبت</button>
+      <button class="w3-button w3-block w3-section w3-padding button" id="my-form-button" type="submit"  style="border-radius: 1em;">ثبت</button>
       <p id="my-form-status"></p>
     </div>
   </form>
@@ -329,6 +328,14 @@
 
   <script>
     function burgermenu() {
+
+      // var x = document.getElementById("demo");
+      // if (x.className.indexOf("w3-show") == -1) {
+      //   x.className += " w3-show";
+      // } else { 
+      //   x.className = x.className.replace(" w3-show", "");
+      // }
+
       var x = document.getElementById("myTopnav");
       if (x.className === "topnav") {
         x.className += " responsive";
