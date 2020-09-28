@@ -141,14 +141,13 @@ h6 {
 .topnav {
   overflow: hidden;
   background-color: #525252;
-  height: 5rem;
-  display: flex;
+  height: 5em;
   position: fixed;
-  width: 100%;
-  z-index: 999;
-  /* position: fixed; */
   top: 0;
-  /* width: 100%; */
+  z-index: 99;
+  width: 100%;
+  margin-bottom: 0;
+  display: flex;
 }
 
 .topnav a {
@@ -163,7 +162,6 @@ h6 {
 }
 
 .topnav a:hover {
-  /* background-color: #ddd; */
   color: #aeea00;
 }
 
@@ -177,20 +175,19 @@ h6 {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {
-    display: none;
-  }
+  .topnav a:not(:first-child) {display: none;}
+  .topnav {height:auto;margin-bottom: 0em;}
   .topnav a.icon {
     float: left;
     display: block;
+    position: absolute;
+    left: 0;
   }
 }
 
-
 @media screen and (max-width: 600px) {
-  .topnav.responsive {
-    position: relative;
-  }
+  .topnav.responsive {position: relative; display: flex; flex-direction: column;margin-bottom: -5em;}
+  .topnav.responsive a {line-height: 3rem;}
   .topnav.responsive .icon {
     position: absolute;
     left: 0;
@@ -201,6 +198,13 @@ h6 {
     display: block;
     text-align: right;
   }
+  /* .headmargin {
+    margin-top: 0rem;
+  } */
+}
+
+.headmargin {
+  margin-top: 5rem;
 }
 
 .footer {
@@ -244,7 +248,7 @@ body {
   background: -moz-radial-gradient(circle, rgba(0, 5, 152, 1) 0%, rgba(9, 9, 121, 1) 62%, rgba(0, 3, 74, 1) 100%);
   background: -webkit-radial-gradient(circle, rgba(0, 5, 152, 1) 0%, rgba(9, 9, 121, 1) 62%, rgba(0, 3, 74, 1) 100%);
   background: radial-gradient(circle, rgba(0, 5, 152, 1) 0%, rgba(9, 9, 121, 1) 62%, rgba(0, 3, 74, 1) 100%); */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000598",endColorstr="#00034a",GradientType=1);
+  /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000598",endColorstr="#00034a",GradientType=1); */
 }
 .boxDesc {
   /* display: flex; */
