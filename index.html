@@ -14,7 +14,9 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179076259-1"></script>
 <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-179076259-1');</script>
-
+<style>
+  .mySlides {display:none;}
+  </style>
 </head>
 <body>
 
@@ -63,8 +65,34 @@
         شریف،
         زیر نظر استاد این دانشگاه، به منزل شما می‌آورند. فرقی نمی‌کند در کدام بخش کشور یا حتی خارج از کشور هستید؛
         با تاک، آموزش با کیفیت توسط مدرسین مسلط و با توانمندی‌های اثبات شده در دسترس شماست.</p>
-    </div>
+    
+    <!-- <div class="w3-content w3-section" style="max-width:500px;border-radius: 15%;">
+      <div class="w3-content mySlides w3-animate-left">
+      <img class="w3-card-4 " src="images/slider/1.jpg" style="">
+      <div class="w3-display-bottomleft w3-container w3-padding-16 w3-black">
+        تاک، برگ سبزی است از اعضای آزمایشگاه آسان دانشگاه صنعتی شریف
+      </div></div>
+      <img class="mySlides w3-card-4 w3-animate-left" src="images/slider/2.jpg" style="">
+      <img class="mySlides w3-card-4 w3-animate-left" src="images/slider/3.jpg" style="">
+      <img class="mySlides w3-card-4 w3-animate-left" src="images/slider/4.jpg" style="">
+      <img class="mySlides w3-card-4 w3-animate-left" src="images/slider/5.jpg" style="">
+    </div> -->
+    
   </div>
+  
+  </div>
+  <div class="parallax w3-animate-top">
+    <div class="w3-display-content ">
+    <div class="w3-content  w3-display-topleft w3-padding-16 w3-margin-top w3-margin-left w3-margin-right w3-margin-right" 
+    style="padding:5% 1%; background-color:rgba(0,0,0,.5);color: rgb(205, 255, 124);">
+      <a href="http://easy.ce.sharif.edu/takacademy/" style="text-decoration: none;">
+        تاک، برگ سبزی است از اعضای آزمایشگاه آسان دانشگاه صنعتی شریف.
+      </a>
+    </div>
+    <a href="http://easy.ce.sharif.edu/"><img class="w3-circle w3-display w3-display-bottomleft w3-card-4 w3-hover-shadow w3-hover-opacity" src="images/easy.jpg" style="max-width: 70px; margin: 2em; padding: 2px;"></a>
+  </div>
+  </div> 
+<!-- </div> -->
 
   <div class="pt-3 w3-mobile" id="howto">
     
@@ -500,6 +528,22 @@
     xhr.send(data);
   }
 </script>
+<script>
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+  </script>
 
 </body>
 </html>

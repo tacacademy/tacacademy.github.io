@@ -186,7 +186,7 @@ h6 {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative; display: flex; flex-direction: column;margin-bottom: -5em;}
+  .topnav.responsive {position: fixed; display: flex; flex-direction: column;margin-bottom: -5em;}
   .topnav.responsive a {line-height: 3rem;}
   .topnav.responsive .icon {
     position: absolute;
@@ -364,4 +364,33 @@ body {
 #my-form-button {
   background-color: #79b700;
   color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .mySlides {
+    /* height: 5em;
+    border-radius: 0%; */
+  }
+}
+.mySlides {
+  max-height:20em;
+  width:100%; 
+  border-radius: 2em;
+}
+
+.parallax {
+  /* The image used */
+  margin-top: 116px;
+  margin-bottom: -58px;
+  background-image: url("images/slider/ea3.jpg");
+
+  /* Set a specific height */
+  height: 250px;
+  width: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
