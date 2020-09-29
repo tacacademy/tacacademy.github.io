@@ -42,11 +42,13 @@
 
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 body {
   font-family: "Shabnam";
   direction: rtl;
+  height: 100%;
 }
 
 h1,
@@ -241,6 +243,10 @@ body {
   background: #fcfeff;
 }
 
+#intro {
+  margin-top: -50px;
+}
+
 .topHeader {
   position: relative;
   z-index: 1;
@@ -379,7 +385,7 @@ body {
 }
 
 .parallax {
-  margin-top: 116px;
+  margin-top: 98px;
   margin-bottom: -58px;
   background-image: url("images/slider/ea3.jpg");
 
